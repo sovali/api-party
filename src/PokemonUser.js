@@ -30,7 +30,7 @@ class PokemonUser extends Component {
     const { user } = this.state
     return (
        <div className="pokemon-user">
-       <img src={user.logo} alt="poke avatar" />
+       <img href={user.back_default} alt="poke avatar" />
         <h2>{user.name}</h2>
         <h3>height: {user.height}</h3>
         <h3>weight: {user.weight}</h3>

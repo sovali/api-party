@@ -16,8 +16,8 @@ class App extends Component {
           </div>
           <ul className="nav-links">
             <li>
-              <NavLink to='/github'>Github API</NavLink>
-              <NavLink to='/pokemon'>Pokemon API</NavLink>
+              <NavLink to='/github'>Github API   |</NavLink>
+              <NavLink to='/pokemon'>   Pokemon API</NavLink>
             </li>
           </ul>
         </div>

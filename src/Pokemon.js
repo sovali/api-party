@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import './Github.css'
-import GithubUser from './GithubUser'
+import './Pokemon.css'
+import PokemonUser from './PokemonUser'
 
-class Github extends Component {
+class Pokemon extends Component {
   state = {
     username: ''
   }
@@ -17,16 +17,16 @@ class Github extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.setState({username: ''})
-    this.props.history.push(`/github/${this.state.username}`)
+    this.props.history.push(`/pokemon/${this.state.username}`)
   }
 
   render() {
     return (
-      <div className="github">
+      <div className="pokemon">
         <img 
-          className="github-logo" 
-          src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png" 
-          alt="github logo" 
+          className="poke-logo" 
+          src="http://thewhitonline.com/wp-content/uploads/2016/03/English_Pok%C3%A9mon_logo.svg_.png" 
+          alt="pokemon logo" 
         />
         <form onSubmit={this.handleSubmit}>
           <div>
@@ -37,15 +37,15 @@ class Github extends Component {
             />
           </div>
           <div>
-            <button>Look up Github user</button>
+            <button>Look up a Pokemon</button>
           </div>
         </form>
 
-        <Route exact path="/github" render={() => <h3>Please enter a username to search on Github</h3>} />
-        <Route path='/github/:username' component={GithubUser} />
+        <Route exact path="/pokemon" render={() => <h3>Please enter a Pokemon name</h3>} />
+        <Route path='/pokemon/:username' component={PokemonUser} />
       </div>
     )
   }
 }
 
-export default Github
+export default Pokemon

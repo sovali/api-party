@@ -28,9 +28,10 @@ class PokemonUser extends Component {
 
   render() {
     const { user } = this.state
+    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${user.id}.png`
     return (
        <div className="pokemon-user">
-       <img href={user.back_default} alt="poke avatar" />
+       <img src={url} alt="poke avatar" />
         <h2>{user.name}</h2>
         <h3>height: {user.height}</h3>
         <h3>weight: {user.weight}</h3>
